@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predator Filter App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-800 text-white">
+    <nav class="bg-gray-950 p-5 mb-6 min-h-8xl">
+        <div class="container max-w-7xl mx-auto flex flex-col sm:flex-row gap-9 items-center text-xl">
+            <!-- Search Area -->
+            <div class="relative w-full">
+                <input type="text" 
+                id="search" 
+                class="bg-zinc-600 rounded-full p-2 pl-8 focus:w-4/6"
+                placeholder="Search Predators...">
+                <img
+                class="absolute w-5 h-5 left-2 top-1/2 -translate-y-1/2" 
+                src="/images/search.png">
+
+                <!-- Team Icon -->
+                <button onclick = updatePageToTeam()>
+                <img
+                class="absolute w-8 h-8 right-0 top-1/2 -translate-y-1/2" 
+                src="/images/team.png">
+                <small id="team-size" class="bg-red-500 rounded-full text-xs text-white text-center w-4 h-4 absolute -top-2 -right-2">0</small>
+            </button>
+             </div>
+            </div>       
+        </div>
+    </nav>
+    
+
+    <main class="flex flex-col md:flex-row container mx-auto max-w-9xl">
+        <div class="space-y-4 p-2 w-full max-w-[10rem]">
+            <h2 class="text-2xl">Filters</h2>
+            <h3 class="text-xl">Weapon</h3>
+            <div id="filters-container" class="text-xl space-y-2">
+                <div>
+                    <input type="checkbox" class="check" id="plasmaCaster">
+                    <label for="plasmaCaster">Plasma Caster</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="check" id="smartDisc">
+                    <label for="smartDisc">Smart Disc</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="check" id="combiStick">
+                    <label for="combiStick">Combi Stick</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="check" id="netGun">
+                    <label for="netGun">Net Gun</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="check" id="whip">
+                    <label for="whip">Whip</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Predators Wrapper -->
+        <div id="predators-wrapper" class="hidden w-full max-w-8xl mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4">  
+        <!-- Predators goes here -->
+        </div>
+        <!-- Team Wrapper -->
+        <div id="team-wrapper" class=" w-full max-w-5xl mx-auto grid grid-cols-1 gap-6 place-content-center p-4">
+        <h1 class="text-center text-5xl flex justify-between"> YOUR TEAM<button class="text-3xl" onclick = updatePageToMain() >Go Back To Main Page</button></h1>
+        
+        <!-- Team members goes here -->
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

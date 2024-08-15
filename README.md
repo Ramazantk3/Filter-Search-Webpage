@@ -3,7 +3,8 @@
 
 # What's Important In This Code?
 - ### Styling is done by using Tailwind.css so there is no styles.css file but everything in the classes of html tags.
-- ### This code contains advanced Javascript methods like forEach,map,trim,filter,document.createElement,appendChild,classList,contains and event listeners. 
+- ### This code contains advanced Javascript methods like forEach,map,trim,filter,document.createElement,appendChild,classList,contains and event listeners.
+- ### This code contains DOM manipulation with JS.
 - ### To change display, 'hidden' class of Tailwind.css added and removed.
 
 # What's New In This Code That Also Important?
